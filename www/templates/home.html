@@ -1,0 +1,40 @@
+<ion-view>
+    <ion-nav-title>Bienvenido a E-fruver</ion-nav-title>
+
+    <ion-content>
+        <ion-slide-box show-pager="true" does-continue="true" pager-click="true" auto-play="true" slide-interval="4000">
+         <ion-slide ng-repeat="count in [1,2,3,4]">
+             <img ng src="img/home_slider/{{count}}.jpg" class="full-image"/> 
+         </ion-slide>
+</ion-slide-box>
+<ion-list class="list-card">
+    <ion-item class="item-dividier item-button-rigth">
+    
+    Productos por categoria...
+        
+     </ion-item>
+     
+
+    <ion-item class="item-avatar-left" ng-repeat="cat in categories" ui-sref="app.category({categoryID: cat.slug})">    
+        <img src="{{cat.image}}"/>
+    <h2>{{cat.name}}</h2>
+    <p>{{cat.description}}</p>
+     
+     
+
+    </ion-item> 
+</ion-list>
+<ion-list clasa="item-body">
+    <ion-item class="item-image padding">
+          <div class="item item-divider">
+   Somos la vitrina de los pequeños y medianos empresarios locales.
+  </div>
+        <img src="img/footer_banner.png"/>
+    </ion-item>
+    <ion-item>
+        <div style="font-size:10px;"><center>Desarrollado por efruver</center></div>
+        
+    </ion-item>
+</ion-list>
+ </ion-content>
+    </ion-view>

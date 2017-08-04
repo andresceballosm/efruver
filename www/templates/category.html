@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-nav-title>Productos por categoria</ion-nav-title>
+<ion-content>      
+     </ion-item>
+		 
+    <div class="list">
+
+	    <div class="item item-thumbnail-left item-button-right" ng-repeat="product in products" ui-sref="app.product({productID: product.id})">
+	      <img ng-src="{{product.featured_src}}">
+	      <h2>{{product.title}}</h2>
+	      <p>{{product.categories[0]}}<br/><span ng-bind-html='product.price_html'></span></p>
+	      <button class="button button-balanced" ng-click="addToCart(product);">
+	      	<i class="icon ion-android-cart"></i>
+	      </button>
+	    </div>
+
+	</div>
+	 <ion-infinite-scroll on-infinite="loadMore()" ng-if="canLoadMore" immediate-check="false">
+
+        </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

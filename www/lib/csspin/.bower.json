@@ -1,0 +1,43 @@
+{
+  "name": "csspin",
+  "homepage": "https://webkul.github.io/csspin/",
+  "authors": [
+    "Nitish Kumar <support@webkul.com>"
+  ],
+  "description": "CSS Spinners and Loaders - Modular, Customizable and Single HTML Element Code",
+  "main": "csspin.css",
+  "keywords": [
+    "csspin",
+    "css",
+    "less",
+    "spinner",
+    "spinners",
+    "loader",
+    "loaders",
+    "cssloader",
+    "cssloaders",
+    "lessloader",
+    "lessloaders",
+    "purecssloader",
+    "modularcss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.1.1",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.1",
+    "commit": "d429a0f8753fbad51663c165e4823733b736be2a"
+  },
+  "_source": "https://github.com/webkul/csspin.git",
+  "_target": "^1.1.1",
+  "_originalSource": "csspin",
+  "_direct": true
+}

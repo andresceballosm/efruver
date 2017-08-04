@@ -1,0 +1,92 @@
+<ion-view view-title="SignUp">
+<div class='bar bar-subheader bar-balanced'>
+  <h1 class="title">Complete el formulario(campos con * son obligatorios)</h1>
+</div>
+<ion-content class="has-subheader padding">
+
+<div class="list list-inset">
+  <div class="item item-divider">
+    Información Personal
+  </div>
+
+   <label class="item item-input item-select">
+    <span class="input-label">Pais*</span>
+    <select ng-model="newUser.country">
+      <option selected>Colombia</option>
+      
+    </select>
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Nombre*</span>
+    <input type="text" ng-model="newUser.first_name">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Apellido*</span>
+    <input type="text" ng-model="newUser.last_name">
+  </label>
+    <label class="item item-input">
+    <span class="input-label">Empresa</span>
+    <input type="text" ng-model="newUser.company">
+  </label>
+    <label class="item item-input">
+    <span class="input-label">NIT/CC</span>
+    <input type="text" ng-model="newUser.address_1">
+  </label>
+   </label>
+    <label class="item item-input">
+    <span class="input-label">Dirección*</span>
+    <input type="text" ng-model="newUser.address_2">
+  </label>
+  <label class="item item-input item-select">
+    <span class="input-label">Ciudad*</span>
+    <select ng-model="newUser.city">
+      <option>Dosquebradas</option>
+      <option selected>Pereira</option>
+        </select>
+  </label>
+
+        <label class="item item-input item-select">
+    <span class="input-label">Departamento*</span>
+    <select ng-model="newUser.state">
+      <option>Risaralda</option>
+      <option selected></option>
+      
+    </select>
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Barrio</span>
+    <input type="text" ng-model="newUser.postcode">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Email*</span>
+    <input type="email" ng-model="newUser.email" ng-blur="checkUserEmail(newUser.email)">
+  </label>
+
+   <label class="item item-input" ng-hide="newUser.billingToShipping">
+    <span class="input-label">Telefono*</span>
+    <input type="text" ng-model="newUser.billing_address.phone">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Elija una Contraseña*</span>
+    <input type="password" ng-model="newUser.password">
+  </label>
+  
+  
+
+
+
+
+  <div class="button-bar">
+    <button class="button button-assertive button-block button-outline">Cancelar</button>
+    <button class="button button-balanced button-block" ng-disabled="{{!newUser.isValid}}" ng-click="signUp(newUser)">Registrarse</button>
+  </div>
+</div>
+
+
+
+</ion-content>
+</ion-view>

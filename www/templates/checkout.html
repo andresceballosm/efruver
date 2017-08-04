@@ -1,0 +1,78 @@
+<ion-view view-title="SignUp">
+<div class='bar bar-subheader bar-balanced'>
+  <h1 class="title">Finalizar pedido</h1>
+</div>
+<ion-content class="has-subheader padding">
+
+<div class="list list-inset">
+  <div class="item item-divider">
+    Información Personal
+  </div>
+
+   
+    <label class="item item-input">
+    <span class="input-label">Nombre</span>
+    <input type="text" ng-model="newOrder.first_name">
+  </label>
+  
+  <label class="item item-input">
+    <span class="input-label">Apellido</span>
+    <input type="text" ng-model="newOrder.last_name">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Empresa</span>
+    <input type="text" ng-model="newOrder.company">
+  </label>
+    <label class="item item-input">
+    <span class="input-label">NIT/CC</span>
+    <input type="text" ng-model="newOrder.address_1">
+  </label>
+   </label>
+    <label class="item item-input">
+    <span class="input-label">Dirección*</span>
+    <input type="text" ng-model="newOrder.address_2">
+  </label>
+
+   <label class="item item-input">
+    <span class="input-label">Barrio</span>
+    <input type="text" ng-model="newOrder.postcode">
+  </label>
+
+  <label class="item item-input item-select">
+    <span class="input-label">Ciudad*</span>
+    <select ng-model="newOrder.city">
+      <option>Dosquebradas</option>
+      <option selected>Pereira</option>
+        </select>
+  </label>
+
+    
+
+   <label class="item item-input" ng-hide="newOrder.billingToShipping">
+    <span class="input-label">Telefono*</span>
+    <input type="text" ng-model="newOrder.billing_address.phone">
+  </label>
+
+
+  <div class="item item-divider">
+    Información de pago
+  </div>
+  <label class="item item-input item-select">
+    <span class="input-label">Medio de pago</span>
+    <select ng-model="newOrder.paymentMethod">
+      <option ng-repeat="method in paymentMethods">{{method.method_title}}</option>
+    </select>
+  </label>
+
+
+  <div class="button-bar">
+    <button class="button button-assertive button-block button-outline">Cancelar</button>
+    <button class="button button-balanced button-block" ng-click="placeOrder(newOrder)">Realizar pedido</button>
+  </div>
+</div>
+
+
+
+</ion-content>
+</ion-view>
